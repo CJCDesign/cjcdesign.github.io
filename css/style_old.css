@@ -1,0 +1,76 @@
+body {
+	font-family: "Forum", cursive;
+}
+
+header {
+	color: black;
+	text-align: center;
+	background: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+h1 {
+	font-family: 'Waiting for the Sunrise', cursive;
+	color:#C9C5BB;
+	font-size: 42px;
+}
+h2 {
+	font-family: 'Forum', cursive;
+	color:#C9C5BB;
+	font-size: 16px;
+	text-align: center;
+}
+
+.tertiary .selected {
+    text-transform: lowercase; /* to affect the sub list */
+}
+
+p {background: none;
+	width:560px;
+	padding: 10px 0px 0px 0px;
+	color:gray;
+	margin: 0 auto;
+	text-align: center; /* centers text in middle */
+	display: block; /* changes the element to block */
+}
+
+a {
+ color: #C9C5BB; /* colors the list items */
+ text-decoration: none; /* removes default underline */
+}
+nav a {
+    display: block; /* spaces the list items */
+    padding: 5px 15px 10px 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+nav ul li {
+    display: inline-block; /* gets the list items to line up side by side */
+}
+
+nav.secondary ul li  {
+    display: block; /* gets the list items to line up vertically */
+    color: #E8CE97; /* colors sublist this color *//* not sure this is right */
+}
+
+nav.secondary {
+	display: inline block; /* works with image to have both as inline block elements so they can go side by side */
+}
+nav.secondary ul li {
+	text-align: left; /* align text left in secondary list */
+}
+
+section{
+	text-align: center; /* removes default underline */
+	max-width: 800px; /* defining the size of the image container */
+	margin: 0px auto; /* centers the container of the image horizontally */
+}
+section img{
+	width: 100%;
+
+}
+.image-right{display:inline-block;}
+.selected{color:#DBAB44;} /* colors the highlighted list item a yellow orange color */
+.photo{padding:0px 0px 0px 0px;} /* puts space around photo from other elements */
