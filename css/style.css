@@ -33,19 +33,6 @@ h2 {
   text-transform: capitalize;
 }
 
-a {
-  font-size: 1.5vw;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--body);
-
-  margin: 1vw;
-}
-
-a:hover {
-  color: var(--hover);
-}
-
 figure {
   width: 30vw;
   height: 30vw;
@@ -74,6 +61,8 @@ figure h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+
+  pointer-events: none;
 }
 
 
@@ -94,10 +83,24 @@ figure h2 {
 }
 
 #header {
-  margin-bottom: 1vw;
+  margin-bottom: 3vw;
 }
 
 #mainImage {
   width: 70vw;
   height: 30vw;
+}
+
+.navAnchor {
+  font-size: 1.5vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--body);
+
+  margin: 1vw;
+}
+
+.navAnchor:hover {
+  transition: 0.3s;
+  color: var(--hover);
 }

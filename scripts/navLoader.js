@@ -17,8 +17,11 @@ function loadMenu() {
 
     for (var i = 0; i < menuOptions.length; i++) {
       if (i >= 1) {
+        var anchor = document.createElement("A");
+        anchor.setAttribute("href", "\\pages/" + menuOptions[i] + ".html");
+        boxes.appendChild(anchor);
         var fig = document.createElement("FIGURE");
-        boxes.appendChild(fig);
+        anchor.appendChild(fig);
         var title = document.createElement("H2");
         title.innerHTML = menuOptions[i];
         fig.appendChild(title);
@@ -38,6 +41,7 @@ function loadMenu() {
 
     for (var i = 0; i < menuOptions.length; i++) {
       var anchor = document.createElement("A");
+      anchor.setAttribute("class", "navAnchor");
       nav.appendChild(anchor);
 
       anchor.innerHTML = menuOptions[i];
