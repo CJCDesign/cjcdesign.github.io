@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Page Title</title>
-		<link rel="stylesheet" href="\css/style_old.css">
-		<link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Forum' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<header>
-			<h1><a href="\">Carrie Cockburn</a></h1>
-			<div id="menuHere"></div>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Graphics</title>
+    <link rel="stylesheet" href="\css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Forum' rel='stylesheet' type='text/css'>
+  </head>
 
-			<nav class='tertiary'>
-				<ul>
-					<li><a class='selected' href="maps.html">MAPS</a></li>
-					<li><a class='selected' href="infographics.html">INFOGRAPHICS</a></li>
-			    <li><a class='selected' href="illustrations.html">ILLUSTRATIONS</a></li>
-			    <li><a class='selected' href="awards.html">AWARDS</a></li>
-			    </ul>
-			</nav>
-		</header>
+  <body class="flexcolumn">
+    <!-- Header -->
+    <div class="flexcolumn" id="header">
+      <h1>Carrie Cockburn</h1>
+      <div id="nav"></div>
+    </div>
+    <!-- Content -->
+    <div class="flexrow" style="flex-wrap: wrap;" id="graph"></div>
+  </body>
 
-		<section>
-        	<img src="\images/graphic1.jpg" alt="Great Lakes Gate">
-        </section>
-
-		<footer>
-		<p>&#64 2014 by Carrie Cockburn</p>
-		</footer>
-	</body>
-	<script src="\scripts/menuLoader.js" charset="utf-8"></script>
+  <script src="\scripts/navLoader.js" charset="utf-8"></script>
 </html>

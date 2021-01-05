@@ -3,38 +3,49 @@ var menuOptions = [
   "current",
   "photography",
   "graphics",
-  "drawings",
+  "drawings and paintings",
   "jewelery",
   "the tacky bee",
   "blog"
+];
+
+var photogOptions = [
+  "portraits",
+  "art",
+  "nature",
+  "interiors",
+  "events"
+];
+
+var graphOptions = [
+  "infographics",
+  "maps",
+  "tables",
+  "animations"
+];
+
+var drawpaintOptions = [
+  "drawings",
+  "paintings"
+];
+
+var jeweleryOptions = [
+  "necklaces",
+  "earrings",
+  "bracelets",
+  "rings"
+];
+
+var beeOptions = [
+  "wraps",
+  "breadbags"
 ];
 
 loadMenu();
 
 function loadMenu() {
   if (document.getElementById("nav") == null) {
-    var boxes = document.getElementById("boxes");
-
-    for (var i = 0; i < menuOptions.length; i++) {
-      if (i >= 1) {
-        var anchor = document.createElement("A");
-        anchor.setAttribute("href", "\\pages/" + menuOptions[i] + ".html");
-        boxes.appendChild(anchor);
-        var fig = document.createElement("FIGURE");
-        anchor.appendChild(fig);
-        var title = document.createElement("H2");
-        title.innerHTML = menuOptions[i];
-        fig.appendChild(title);
-        var box = document.createElement("IMG");
-        box.src = "images/" + menuOptions[i] + ".jpg";
-        box.alt = "[" + menuOptions[i] + "]";
-        fig.appendChild(box);
-
-        if (i == 1) {
-          fig.setAttribute("id", "mainImage");
-        }
-      }
-    }
+    loadBoxes("boxes", menuOptions);
   }
   else {
     var nav = document.getElementById("nav");
@@ -51,6 +62,47 @@ function loadMenu() {
       }
       else {
         anchor.setAttribute("href", "\\pages/" + menuOptions[i] + ".html");
+      }
+    }
+
+    if (document.getElementById("photog") != null) {
+      loadBoxes("photog", photogOptions);
+    }
+    else if (document.getElementById("graph") != null) {
+      loadBoxes("graph", graphOptions);
+    }
+    else if (document.getElementById("drawpaint") != null) {
+      loadBoxes("drawpaint", drawpaintOptions);
+    }
+    else if (document.getElementById("jewelery") != null) {
+      loadBoxes("jewelery", jeweleryOptions);
+    }
+    else if (document.getElementById("bee") != null) {
+      loadBoxes("bee", beeOptions);
+    }
+  }
+}
+
+function loadBoxes(target, arrayName) {
+  var boxes = document.getElementById(target);
+
+  for (var i = 0; i < arrayName.length; i++) {
+    if (i >= 1 || arrayName != menuOptions) {
+      var anchor = document.createElement("A");
+      anchor.setAttribute("href", "\\pages/" + arrayName[i] + ".html");
+      boxes.appendChild(anchor);
+      var fig = document.createElement("FIGURE");
+      anchor.appendChild(fig);
+      var title = document.createElement("H2");
+      title.innerHTML = arrayName[i];
+      fig.appendChild(title);
+      var box = document.createElement("IMG");
+      box.src = "\\images/" + arrayName[i] + ".jpg";
+      box.alt = "[" + arrayName[i] + "]";
+      fig.appendChild(box);
+
+      if (i == 1 && arrayName == menuOptions) {
+        fig.setAttribute("id", "mainImage");
       }
     }
   }
