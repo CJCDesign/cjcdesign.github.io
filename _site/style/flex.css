@@ -1,0 +1,14 @@
+.flex { display: flex; }
+.column { flex-direction: column; }
+.row { flex-direction: row; flex-wrap: wrap; }
+.noWrap { flex-wrap: nowrap; }
+
+.row p, .row h1, .row h2, .row h3, .row .column {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.column p, .column h1, .column h2, .column h3, .column .row {
+    margin: 0;
+    margin-bottom: 20px;
+}
